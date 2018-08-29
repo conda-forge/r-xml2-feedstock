@@ -1,7 +1,7 @@
 About r-xml2
 ============
 
-Home: https://github.com/hadley/xml2/
+Home: https://github.com/r-lib/xml2
 
 Package license: GPL (>= 2)
 
