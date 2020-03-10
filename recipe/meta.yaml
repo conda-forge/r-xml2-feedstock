@@ -1,4 +1,4 @@
-{% set version = '1.2.2' %}
+{% set version = "1.2.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/xml2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/xml2/xml2_{{ version }}.tar.gz
-  sha256: 3050f147c4335be2925a576557bbda36bd52a5bba3110d47b740a2dd811a78f4
+  sha256: c3f48ea75e61970d0c21c6a413247178a4193640f9793d3514031a46dcec2c11
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -51,10 +51,9 @@ test:
 about:
   home: https://xml2.r-lib.org/, https://github.com/r-lib/xml2
   license: GPL (>= 2)
-  summary: Work with XML files using a simple, consistent interface. Built on top of the 'libxml2'
-    C library.
+  summary: Work with XML files using a simple, consistent interface. Built on top of the 'libxml2' C library.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
