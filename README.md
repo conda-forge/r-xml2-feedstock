@@ -3,7 +3,7 @@ About r-xml2
 
 Home: https://xml2.r-lib.org/, https://github.com/r-lib/xml2
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xml2-feedstock/blob/master/LICENSE.txt)
 
@@ -87,6 +87,20 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1809&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-xml2-feedstock?branchName=master&jobName=osx&configuration=osx_64_r_base4.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1809&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-xml2-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_r_base4.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1809&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-xml2-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_r_base4.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
