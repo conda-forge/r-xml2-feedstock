@@ -52,9 +52,9 @@ test:
 
 about:
   home: https://xml2.r-lib.org/, https://github.com/r-lib/xml2
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Work with XML files using a simple, consistent interface. Built on top of the 'libxml2' C library.
-  license_family: GPL3
+  license_family: GPL2
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
