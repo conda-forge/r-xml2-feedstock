@@ -3,7 +3,7 @@ About r-xml2
 
 Home: https://xml2.r-lib.org/, https://github.com/r-lib/xml2
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xml2-feedstock/blob/master/LICENSE.txt)
 
