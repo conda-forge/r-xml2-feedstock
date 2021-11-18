@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 export DISABLE_AUTOBREW=1
 
 # shellcheck disable=SC2086
