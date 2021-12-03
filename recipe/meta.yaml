@@ -57,6 +57,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - colinbrislawn
     - conda-forge/r
 
 # Package: xml2
