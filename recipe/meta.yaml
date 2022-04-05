@@ -40,6 +40,7 @@ requirements:
   host:
     - r-base
     - r-rcpp
+    - libxml2
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
