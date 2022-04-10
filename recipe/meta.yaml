@@ -50,6 +50,7 @@ requirements:
 test:
   requires:
     - r-testthat
+    - r-mockery
   commands:
     - $R -e "library('xml2')"                          # [not win]
     - $R -e "testthat::test_package('xml2')"           # [not win]
