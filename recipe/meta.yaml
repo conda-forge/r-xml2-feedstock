@@ -40,11 +40,12 @@ requirements:
   host:
     - r-base
     - r-rcpp
-    - libxml2
+    - {{ native }}libxml2
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-rcpp
+    - libxml2
 
 test:
   commands:

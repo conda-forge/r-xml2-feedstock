@@ -1,8 +1,9 @@
 #!/bin/bash
 export DISABLE_AUTOBREW=1
 
-# Get latest config.sub and config.guess
-cp $BUILD_PREFIX/share/gnuconfig/config.{sub,guess} .
-
 # shellcheck disable=SC2086
-${R} CMD INSTALL --configure-vars="INCLUDE_DIR=${PREFIX}/include/libxml2 LIB_DIR=${PREFIX}/lib" --build . ${R_ARGS}
+if [ ${CONDA_BUILD_CROSS_COMPILATION} -eq 1 ]; then
+    ${R} CMD INSTALL --build --no-html . ${R_ARGS}
+else
+    ${R} CMD INSTALL --build . ${R_ARGS}
+fi
