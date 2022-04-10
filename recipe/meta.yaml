@@ -48,9 +48,13 @@ requirements:
     - libxml2
 
 test:
+  requires:
+    - r-testthat
   commands:
-    - $R -e "library('xml2')"           # [not win]
-    - "\"%R%\" -e \"library('xml2')\""  # [win]
+    - $R -e "library('xml2')"                          # [not win]
+    - $R -e "testthat::test_package('xml2')"           # [not win]
+    - "\"%R%\" -e \"library('xml2')\""                 # [win]
+    - "\"%R%\" -e \"testthat::test_package('xml2')\""  # [win]
 
 about:
   home: https://xml2.r-lib.org/, https://github.com/r-lib/xml2
