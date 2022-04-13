@@ -14,17 +14,19 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('m2w64_cxx') }}      # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - gnuconfig                    # [unix]
+    - {{ compiler('c') }}          # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
+    - {{ compiler('cxx') }}        # [not win]
+    - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}sed               # [win]
     - {{ posix }}grep              # [win]
@@ -38,27 +40,37 @@ requirements:
   host:
     - r-base
     - r-rcpp
+    - {{ native }}libxml2
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-rcpp
+    - libxml2
 
 test:
+  requires:
+    - r-testthat
+    - r-mockery
   commands:
-    - $R -e "library('xml2')"           # [not win]
-    - "\"%R%\" -e \"library('xml2')\""  # [win]
+    - $R -e "library('xml2')"                          # [not win]
+    - $R -e "testthat::test_package('xml2')"           # [not win]
+    - "\"%R%\" -e \"library('xml2')\""                 # [win]
+    - "\"%R%\" -e \"testthat::test_package('xml2')\""  # [win]
 
 about:
   home: https://xml2.r-lib.org/, https://github.com/r-lib/xml2
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Work with XML files using a simple, consistent interface. Built on top of the 'libxml2' C library.
-  license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_family: GPL2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
     - colinbrislawn
     - conda-forge/r
+    - mfansler
 
 # Package: xml2
 # Title: Parse XML
