@@ -15,7 +15,7 @@ source:
 build:
   merge_build_host: true  # [win]
   skip: true              # [win]
-  number: 2
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
@@ -41,12 +41,13 @@ requirements:
   host:
     - r-base
     - r-rcpp
-    - {{ native }}libxml2
+    - {{ native }}libxml2          # [win]
+    - libxml2                      # [not win]
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
+    - {{ native }}libxml2          # [win]
     - r-rcpp
-    - libxml2
 
 test:
   requires:
