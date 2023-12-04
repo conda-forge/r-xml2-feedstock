@@ -43,13 +43,13 @@ requirements:
   host:
     - r-base
     - r-cli
-    - r-rlang >= 1.1.0
+    - r-rlang >=1.1.0
     - {{ native }}libxml2
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-cli
-    - r-rlang >= 1.1.0
+    - r-rlang >=1.1.0
 
 test:
   requires:
