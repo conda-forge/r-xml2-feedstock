@@ -7,20 +7,24 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xml2-feedstoc
 About r-xml2
 ------------
 
-Home: https://xml2.r-lib.org/, https://github.com/r-lib/xml2
+Home: https://xml2.r-lib.org/
 
 Package license: GPL-2.0-or-later
 
 Summary: Work with XML files using a simple, consistent interface. Built on top of the 'libxml2' C library.
+
+Development: https://github.com/r-lib/xml2
 
 About r-xml2
 ------------
 
-Home: https://xml2.r-lib.org/, https://github.com/r-lib/xml2
+Home: https://xml2.r-lib.org/
 
 Package license: GPL-2.0-or-later
 
 Summary: Work with XML files using a simple, consistent interface. Built on top of the 'libxml2' C library.
+
+Development: https://github.com/r-lib/xml2
 
 Current build status
 ====================
