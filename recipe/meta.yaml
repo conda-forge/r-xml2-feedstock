@@ -52,6 +52,8 @@ requirements:
     - r-rlang >=1.1.0
 
 test:
+  source_files:
+    - tests/
   requires:
     - r-testthat
     - r-mockery
