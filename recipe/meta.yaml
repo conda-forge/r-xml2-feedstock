@@ -58,10 +58,10 @@ test:
     - r-testthat
     - r-mockery
   commands:
-    - $R -e "library('xml2')"                          # [not win]
-    - $R -e "testthat::test_package('xml2')"           # [not win]
-    - "\"%R%\" -e \"library('xml2')\""                 # [win]
-    - "\"%R%\" -e \"testthat::test_package('xml2')\""  # [win]
+    - $R -e "library('xml2')"                                                                           # [not win]
+    - $R -e $R -e "testthat::test_dir('tests/testthat/', package='xml2', load_package='installed')"     # [not win]
+    - "\"%R%\" -e \"library('xml2')\""                                                                  # [win]
+    - "\"%R%\" -e \"testthat::test_dir('tests/testthat/', package='xml2', load_package='installed')\""  # [win]
 
 about:
   home: https://xml2.r-lib.org/
