@@ -259,6 +259,3 @@ Feedstock Maintainers
 * [@colinbrislawn](https://github.com/colinbrislawn/)
 * [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 
-
-<!-- dummy commit to enable rerendering -->
-
