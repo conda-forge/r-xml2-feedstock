@@ -47,6 +47,7 @@ requirements:
     - r-base
     - r-cli
     - r-rlang >=1.1.0
+    - libiconv                     # [win]
     - libxml2
     - liblzma-devel                # [linux]
     - zlib                         # [not osx]
