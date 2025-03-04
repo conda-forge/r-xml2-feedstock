@@ -12,12 +12,14 @@ source:
   sha256: e7b03ceeaa63b5341b00b94e055ff8f1f98511aa54ebe0fb6ca8ac4c8c455f61
 
 build:
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -46,6 +48,8 @@ requirements:
     - r-cli
     - r-rlang >=1.1.0
     - libxml2
+    - liblzma-devel                # [linux]
+    - zlib                         # [not osx]
   run:
     - r-base
     - r-cli
