@@ -3,7 +3,6 @@ azure:
 bot:
   automerge: true
 build_platform:
-  # NB: explicitly emulate until we resolve https://github.com/conda-forge/r-xml2-feedstock/issues/24
   linux_aarch64: linux_aarch64
   linux_ppc64le: linux_ppc64le
   osx_arm64: osx_64
