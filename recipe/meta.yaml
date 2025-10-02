@@ -10,6 +10,8 @@ source:
     - {{ cran_mirror }}/src/contrib/xml2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/xml2/xml2_{{ version }}.tar.gz
   sha256: 0c2e829477f85d36b15f90a2fabb6d286842c6bbb4a5b6ad1ad5ce855a24dc62
+  patches:
+    - patches/0001-conditional-test-skip-libxml2214.patch
 
 build:
   number: 2
