@@ -1,0 +1,23 @@
+From f7f29d380e8e820d9deefb2660d14845ae345936 Mon Sep 17 00:00:00 2001
+From: Mervin Fansler <mmfansler@gmail.com>
+Date: Thu, 2 Oct 2025 22:22:21 +0200
+Subject: [PATCH] conditional test skip libxml2214
+
+see https://github.com/r-lib/xml2/issues/466
+---
+ tests/testthat/test-xml_write.R | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/tests/testthat/test-xml_write.R b/tests/testthat/test-xml_write.R
+index 8693b29..406069f 100644
+--- a/tests/testthat/test-xml_write.R
++++ b/tests/testthat/test-xml_write.R
+@@ -115,6 +115,8 @@ test_that("write_xml works with node input and connections", {
+ })
+ 
+ test_that("write_html work with html input", {
++  ## minor breaking change since 2.14
++  skip_if_not(libxml2_version() < "2.14")
+   x <- read_html("<html><title>Foo</title></html>")
+ 
+   filename <- "../test.html.gz"
