@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,12 +9,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/xml2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/xml2/xml2_{{ version }}.tar.gz
-  sha256: 0c2e829477f85d36b15f90a2fabb6d286842c6bbb4a5b6ad1ad5ce855a24dc62
+  sha256: d2f2641d294b0ccc783bbbf823cacfcf3eb698315c54e71a24c02734c9bf2576
   patches:
     - patches/0001-conditional-test-skip-libxml2214.patch
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
