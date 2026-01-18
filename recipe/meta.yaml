@@ -1,4 +1,4 @@
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/xml2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/xml2/xml2_{{ version }}.tar.gz
-  sha256: 747a5f02dea017c2ed61702fb79327dcb4ec7a48f265f379cc91cb86a8f1a1c4
+  sha256: ed87cfa478f9e4c398288963cf7b0e1a66ba08f54d909b261a4a6c35944f50ab
 
 build:
   number: 0
