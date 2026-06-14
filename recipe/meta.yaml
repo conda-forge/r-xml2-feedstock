@@ -12,7 +12,7 @@ source:
   sha256: ed87cfa478f9e4c398288963cf7b0e1a66ba08f54d909b261a4a6c35944f50ab
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -60,11 +60,13 @@ test:
   requires:
     - r-testthat
     - r-mockery
+  source_files:
+    - tests/
   commands:
-    - $R -e "library('xml2')"                          # [not win]
-    - $R -e "testthat::test_package('xml2')"           # [not win]
-    - "\"%R%\" -e \"library('xml2')\""                 # [win]
-    - "\"%R%\" -e \"testthat::test_package('xml2')\""  # [win]
+    - $R -e "library('xml2')"                                                         # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"           # [not win]
+    - "\"%R%\" -e \"library('xml2')\""                                                # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
 
 about:
   home: https://xml2.r-lib.org/
